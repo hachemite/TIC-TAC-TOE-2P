@@ -1,0 +1,212 @@
+.container-fluid {
+
+  background-color: blanchedalmond;
+
+}
+
+h1 {
+  text-align: center;
+  color: #FF6B6B;
+  font-size: 2.5rem;
+  margin: 0px 0;
+  font-weight: 600;
+  text-shadow: 3px 3px 0px #FFE66D, 6px 6px 0px rgba(0,0,0,0.2);
+  font-family: 'Squire Hawaii', sans-serif;
+  transform: rotate(-2deg);
+  padding: 15px;
+  background: #fff;
+  border: 4px solid #4ECDC4;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  letter-spacing: 2px;
+  display: inline-block;
+  position: relative;
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    padding: 10px;
+    border-width: 3px;
+  }
+}
+
+.btn-primary {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'Squire Hawaii', sans-serif;
+  background-color: #FF6B6B;
+  border: 4px solid #FFE66D;
+  border-radius: 25px;
+  box-shadow: 4px 4px 0px #4ECDC4;
+  transition: all 0.2s ease;
+  color: white;
+  transform: rotate(-1deg);
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    margin: 15px auto;
+  }
+
+  &:hover {
+    background-color: #FFE66D;
+    color: #FF6B6B;
+    transform: rotate(1deg) scale(1.05);
+    box-shadow: -4px 4px 0px #4ECDC4;
+  }
+
+  &:active {
+    transform: rotate(0deg) scale(0.95);
+    box-shadow: 2px 2px 0px #4ECDC4;
+  }
+}
+
+.score-board {
+  background-color: #FFE66D;
+  border: 4px dashed #FF6B6B;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 6px 0 #4ECDC4;
+  font-family: 'Squire Hawaii', sans-serif;
+
+  @media (max-width: 480px) {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border-width: 3px;
+    font-size: 0.9rem;
+  }
+}
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #FFE66D;
+    border-radius: 25px;
+    border: 8px solid #FF6B6B;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+
+
+    @media (max-width: 768px) {
+      width: 95%;
+      padding: 15px;
+      grid-gap: 1px;
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+
+  app-square {
+    align-self: center;
+    border: 2px solid transparent;
+    height: 175px;
+    background: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+
+    @media (max-width: 480px) {
+      height: 100px;
+      font-size: 0.6rem;
+      border-radius: 6px;
+    }
+
+    &:hover {
+      background: #FFE66D;
+      transform: scale(0.98);
+    }
+  }
+
+
+
+.modal.fade.show.d-block {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(90, 90, 90, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: #fff;
+  font-family: 'Squire Hawaii', sans-serif;
+}
+
+.overlay-content {
+  height: 50vh;
+  width: 50vw;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+  padding: 2rem;
+  font-family: 'Squire Hawaii', sans-serif;
+
+  @media (max-width: 480px) {
+    height: 40vh;
+    width: 80vw;
+    padding: 1rem;
+  }
+}
+
+.retry-button {
+  size: 200%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  font-family: 'Squire Hawaii', sans-serif;
+  font-size: 1.2em;
+
+  @media (max-width: 480px) {
+    font-size: 1em;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.retry-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.retry-button svg {
+  width: 24px;
+  height: 24px;
+
+  @media (max-width: 480px) {
+    width: 20px;
+    height: 20px;
+  }
+}

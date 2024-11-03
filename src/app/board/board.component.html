@@ -1,0 +1,30 @@
+    <div class="container-fluid">
+      <div class="row mt-5">
+        <div class="col-12 col-md-4 mx-auto text-center mb-4">
+          <h1 class="mb-3">Current Player: {{player}}</h1>
+          <button class="btn btn-primary mb-3" (click)="newGame()">New Game</button>
+          <h1 class="score-board">X: {{scorex}} - {{scoreo}} :O</h1>
+        </div>
+
+        <div class="col-12 col-md-6 mx-auto">
+          <main >
+            <app-square
+              *ngFor="let val of squares; let i = index"
+              [value]="val"
+              (click)="makeMove(i)">
+            </app-square>
+          </main>
+        </div>
+
+        <div *ngIf="winner || draw" class="overlay">
+          <div class="overlay-content text-center p-4">
+            <h2 class="mb-3">{{ winner ? 'WINNER IS' : 'It\'s a Draw!' }}</h2>
+            <h2 class="mb-3">{{ winner || 'No winner this time' }}</h2>
+            <hr>
+            <button class="btn btn-primary btn-lg" (click)="newGame()" aria-label="New Game">
+              Retry
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
