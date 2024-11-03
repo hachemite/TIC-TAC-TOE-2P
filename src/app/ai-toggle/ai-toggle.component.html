@@ -1,0 +1,12 @@
+<div class="form-check form-switch mt-3">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="toggleAI"
+    [checked]="playerAI"
+    aria-label="Toggle AI"
+    (change)="togglePlayerAI()"
+    data-on="Enabled" data-off="Disabled">/>
+  <label class="form-check-label" for="toggleAI">AI Player: {{playerAI}}</label>
+</div>
+

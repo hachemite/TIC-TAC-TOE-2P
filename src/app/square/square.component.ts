@@ -42,5 +42,5 @@ button.btn-danger {
   `
 })
 export class SquareComponent {
-  @Input() value: 'X' | 'O'| undefined;
+  @Input() value: 'X' | 'O'| null = null;
 }
